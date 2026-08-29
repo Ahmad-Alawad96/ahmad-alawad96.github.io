@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ahmad Alawad - فني كهرباء وحلول كهربائية">
+<title>Ahmad Alawad | فني كهرباء وحلول كهربائية</title>
+<style>
+:root{
+  --green:#b6ff00;
+  --green2:#6dff00;
+  --gold:#ffd45a;
+  --gold2:#f5b92d;
+  --bg:#020504;
+  --panel:#071008;
+  --panel2:#0d160b;
+  --text:#f7f7f2;
+  --muted:#c7cbbf;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);
+  font-family:Tahoma,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 10% 20%,rgba(180,255,0,.13),transparent 28%),
+    radial-gradient(circle at 90% 45%,rgba(255,210,60,.10),transparent 30%),
+    linear-gradient(135deg,#020302,#071008 48%,#010201);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  opacity:.25;
+  background:
+    linear-gradient(115deg,transparent 48%,rgba(182,255,0,.16) 49%,transparent 50%),
+    linear-gradient(65deg,transparent 48%,rgba(255,212,90,.10) 49%,transparent 50%);
+  background-size:90px 90px;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,94%);margin:auto}
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(1,3,2,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,212,90,.35);
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;justify-content:space-between;
+  gap:18px;
+}
+.brand{font-size:25px;font-weight:800}
+.brand span{color:var(--green)}
+.logo-btn{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--gold);box-shadow:0 0 20px rgba(182,255,0,.22);
+  color:var(--green);font-size:27px;background:#050805;
+}
+.menu{
+  width:48px;height:42px;border:0;background:transparent;display:flex;
+  flex-direction:column;justify-content:center;gap:7px;cursor:pointer;
+}
+.menu i{display:block;width:34px;height:4px;border-radius:5px;background:var(--green)}
+.hero{padding:26px 0 70px}
+.hero-image{
+  width:min(760px,100%);margin:0 auto 28px;display:block;
+  border-radius:50%;
+  border:3px solid var(--green);
+  box-shadow:0 0 45px rgba(182,255,0,.24),0 0 100px rgba(255,212,90,.10);
+}
+.badge{
+  width:max-content;max-width:100%;margin:0 auto 22px;
+  padding:13px 28px;border-radius:999px;
+  background:linear-gradient(90deg,var(--green),#d9ff65);
+  color:#101500;font-size:22px;font-weight:800;
+  box-shadow:0 0 28px rgba(182,255,0,.30);
+}
+h1{margin:0;text-align:center;font-size:clamp(48px,9vw,94px);line-height:1;font-weight:900;direction:ltr}
+h1 span{color:var(--green)}
+.hero h2{text-align:center;font-size:clamp(24px,4vw,42px);margin:20px 0;color:#fff}
+.hero h2 b{color:var(--gold)}
+.lead{
+  max-width:850px;margin:0 auto 28px;text-align:center;
+  color:var(--muted);font-size:20px;line-height:2;
+}
+.buttons{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.btn{
+  min-width:220px;padding:18px 28px;border-radius:20px;text-align:center;
+  font-size:21px;font-weight:800;border:2px solid var(--gold);
+  transition:.25s;
+}
+.btn.primary{background:var(--green);color:#101500;border-color:var(--green);box-shadow:0 0 28px rgba(182,255,0,.25)}
+.btn:hover{transform:translateY(-3px)}
+.flags-box{
+  margin:30px auto 0;max-width:760px;padding:20px;border-radius:24px;
+  border:1px solid rgba(182,255,0,.35);background:rgba(8,17,9,.72);
+  display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.flag{height:28px;width:auto;border-radius:3px;object-fit:cover;box-shadow:0 0 8px rgba(255,255,255,.12)}
+.flag.syria{width:48px;height:32px}
+.flags-text{color:#d8d9d0;font-size:18px}
+section{padding:70px 0}
+.section-title{text-align:center;font-size:42px;margin:0 0 12px;color:var(--green)}
+.section-sub{text-align:center;color:var(--muted);font-size:18px;margin:0 0 35px}
+.panel{
+  background:linear-gradient(145deg,rgba(11,21,12,.94),rgba(2,7,3,.94));
+  border:1px solid rgba(182,255,0,.25);border-radius:30px;
+  padding:34px;box-shadow:0 0 35px rgba(0,0,0,.35);
+}
+.services{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.service{
+  padding:28px 18px;text-align:center;border-radius:22px;
+  border:1px solid rgba(255,212,90,.5);
+  background:linear-gradient(145deg,#10180e,#050805);
+  transition:.25s;
+}
+.service:hover{transform:translateY(-5px);border-color:var(--green);box-shadow:0 0 25px rgba(182,255,0,.12)}
+.service .icon{font-size:44px;margin-bottom:10px}
+.service h3{margin:8px 0;color:#fff;font-size:20px}
+.service p{margin:0;color:var(--muted);line-height:1.7}
+.timeline{display:grid;gap:0}
+.time-item{padding:25px 0;border-bottom:1px solid rgba(182,255,0,.22)}
+.time-item:last-child{border-bottom:0}
+.time-item h3{margin:0 0 12px;color:var(--gold);font-size:26px}
+.time-item p{margin:0;color:#ddd;line-height:2;font-size:18px}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.work-card{overflow:hidden;border-radius:24px;border:1px solid rgba(255,212,90,.4);background:#050805}
+.work-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+.work-card h3{margin:0;padding:16px;text-align:center;color:#fff}
+.contact{text-align:center}
+.contact p{color:var(--muted);font-size:19px}
+.contact-box{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+footer{padding:35px 0;text-align:center;border-top:1px solid rgba(255,212,90,.25);color:#aaa}
+@media(max-width:700px){
+  .nav{min-height:62px}.brand{font-size:20px}
+  .hero{padding-top:16px}
+  .hero-image{border-width:2px;margin-bottom:22px}
+  .badge{font-size:17px;padding:12px 19px}
+  .lead{font-size:17px;line-height:1.9}
+  .btn{min-width:145px;padding:15px 16px;font-size:18px}
+  section{padding:48px 0}
+  .panel{padding:22px}
+  .services{grid-template-columns:repeat(2,1fr);gap:12px}
+  .service{padding:20px 10px}.service .icon{font-size:34px}.service h3{font-size:16px}
+  .service p{font-size:13px}
+  .work-grid{grid-template-columns:1fr}
+}
+@media(max-width:430px){
+  .services{grid-template-columns:1fr 1fr}
+  h1{font-size:50px}
+  .hero h2{font-size:25px}
+}
+</style>
+
+<script id="scroll-top">
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.addEventListener('pageshow', function(){ window.scrollTo(0,0); });
+window.addEventListener('load', function(){ setTimeout(function(){ window.scrollTo(0,0); }, 20); });
+</script>
+
+<style id="nine-sections">
+.nine-work{grid-template-columns:repeat(3,1fr)}
+.work-card p{margin:0 16px 16px;text-align:center;color:var(--muted)}
+.future-photo{
+  aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;font-size:42px;color:var(--gold);
+  background:radial-gradient(circle,rgba(182,255,0,.12),transparent 55%),#071008;
+  border-bottom:1px solid rgba(255,212,90,.25);text-align:center;
+}
+.future-photo small{font-size:13px;color:var(--muted);margin-top:8px}
+@media(max-width:900px){.nine-work{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.nine-work{grid-template-columns:1fr}}
+</style>
+<script id="force-home">
+window.addEventListener("load",function(){
+  if(location.hash){
+    history.replaceState(null,"",location.pathname+location.search);
+  }
+  window.scrollTo({top:0,left:0,behavior:"instant"});
+});
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <button class="menu" aria-label="القائمة"><i></i><i></i><i></i></button>
+    <div class="brand">Ahmad <span>Alawad</span></div>
+    <div class="logo-btn">⚡</div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <img class="hero-image" src="hero-top.jpg" alt="Ahmad Alawad - فني كهرباء">
+    <div class="badge">⚡ جودة • أمان • دقة • احترافية</div>
+    <h1>Ahmad <span>Alawad</span></h1>
+    <h2>⚡ فني كهرباء وحلول كهربائية ⚡</h2>
+    <p class="lead">
+      أشارك هنا مسيرتي المهنية وأعمالي في مجال الكهرباء، من سوريا ولبنان وصولاً إلى ألمانيا.
+      أعمال في التأسيس والتمديد، اللوحات، الإنارة، الطاقة الشمسية، الصيانة والحلول الكهربائية الحديثة.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#work">شاهد أعمالي<br><small>معرض الأعمال</small></a>
+      <a class="btn" href="#contact">تواصل معي<br><small>استشارة مجانية</small></a>
+    </div>
+
+    <div class="flags-box">
+      <span class="flags-text">خبرة في عدة بلدان</span>
+      <!-- علم سوريا الجديد كصورة، وليس Emoji، لتجنب ظهور العلم بشكل مشوّه -->
+      <img class="flag syria" src="syria-flag.svg" alt="علم سوريا">
+      <img class="flag" src="https://flagcdn.com/w80/lb.png" alt="علم لبنان">
+      <img class="flag" src="https://flagcdn.com/w80/de.png" alt="علم ألمانيا">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">من أنا</h2>
+    <p class="section-sub">نبذة عن المسيرة والخبرة</p>
+    <div class="panel">
+      <p class="lead" style="margin:0 auto">
+        فني كهرباء وحلول كهربائية، أهتم بجودة التنفيذ والسلامة والدقة، وأسعى لتقديم أعمال
+        احترافية تجمع بين الخبرة العملية والتقنيات الحديثة.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">⚡ خدماتي ⚡</h2>
+    <p class="section-sub">مجموعة من مجالات العمل الكهربائي</p>
+    
+<div class="services">
+  <div class="service"><div class="icon">💡</div><h3>1. إنارة الديكورات</h3><p>LED، إنارة مخفية، سبوت لايت وتصاميم إضاءة احترافية.</p></div>
+  <div class="service"><div class="icon">🏠</div><h3>2. تأسيس الشقق والأبنية</h3><p>تأسيس وتمديد وتجهيز نقاط الإنارة والمقابس للمباني.</p></div>
+  <div class="service"><div class="icon">⚡</div><h3>3. لوحات الكهرباء</h3><p>تركيب وتنظيم وفحص لوحات التوزيع والقواطع والحمايات.</p></div>
+  <div class="service"><div class="icon">🌳</div><h3>4. الإنارة الخارجية والحدائق</h3><p>إنارة الواجهات والحدائق والممرات والمساحات الخارجية.</p></div>
+  <div class="service"><div class="icon">☀️</div><h3>5. الطاقة الشمسية</h3><p>ألواح وإنفرترات وبطاريات وتركيب وربط وصيانة.</p></div>
+  <div class="service"><div class="icon">🏭</div><h3>6. الأعمال الكهربائية الصناعية</h3><p>أعمال المصانع والورش والمحركات والمولدات واللوحات.</p></div>
+  <div class="service"><div class="icon">🏡</div><h3>7. المنازل الذكية والتحكم</h3><p>Smart Home والتحكم بالإضاءة والحساسات والأنظمة الحديثة.</p></div>
+  <div class="service"><div class="icon">🔧</div><h3>8. إصلاح الأعطال والصيانة</h3><p>كشف الأعطال والفحص وإصلاح التمديدات واللوحات الكهربائية.</p></div>
+  <div class="service"><div class="icon">🔌</div><h3>9. محطات شحن السيارات الكهربائية</h3><p>تجهيز وتمديد حلول شحن السيارات الكهربائية وWallbox.</p></div>
+</div>
+
+  </div>
+</section>
+
+<section id="work">
+  <div class="container">
+    <h2 class="section-title">أعمالي</h2>
+    <p class="section-sub">يمكنك إضافة صور جديدة لاحقاً بسهولة</p>
+    <div class="work-grid nine-work">
+  <article class="work-card"><img src="work-01.jpg" alt="إنارة الديكورات"><h3>1. إنارة الديكورات</h3><p>صور الأعمال ستضاف هنا.</p></article>
+  <article class="work-card"><img src="work-02.jpg" alt="تأسيس الشقق والأبنية"><h3>2. تأسيس الشقق والأبنية</h3><p>صور الأعمال ستضاف هنا.</p></article>
+  <article class="work-card"><img src="work-03.jpg" alt="لوحات الكهرباء"><h3>3. لوحات الكهرباء</h3><p>صور الأعمال ستضاف هنا.</p></article>
+  <article class="work-card"><img src="work-04.jpg" alt="الإنارة الخارجية والحدائق"><h3>4. الإنارة الخارجية والحدائق</h3><p>صور الأعمال ستضاف هنا.</p></article>
+  <article class="work-card"><div class="future-photo">☀️<br><small>أضف صور هذا المجال لاحقًا</small></div><h3>5. الطاقة الشمسية</h3><p>معرض صور مستقل لهذا المجال.</p></article>
+  <article class="work-card"><div class="future-photo">🏭<br><small>أضف صور هذا المجال لاحقًا</small></div><h3>6. الأعمال الكهربائية الصناعية</h3><p>معرض صور مستقل لهذا المجال.</p></article>
+  <article class="work-card"><div class="future-photo">🏡<br><small>أضف صور هذا المجال لاحقًا</small></div><h3>7. المنازل الذكية والتحكم</h3><p>معرض صور مستقل لهذا المجال.</p></article>
+  <article class="work-card"><div class="future-photo">🔧<br><small>أضف صور هذا المجال لاحقًا</small></div><h3>8. إصلاح الأعطال والصيانة</h3><p>معرض صور مستقل لهذا المجال.</p></article>
+  <article class="work-card"><div class="future-photo">🔌<br><small>أضف صور هذا المجال لاحقًا</small></div><h3>9. محطات شحن السيارات الكهربائية</h3><p>معرض صور مستقل لهذا المجال.</p></article>
+</div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="container">
+    <h2 class="section-title">المسيرة</h2>
+    <p class="section-sub">خبرة عملية في عدة بلدان</p>
+    <div class="panel timeline">
+      <div class="time-item">
+        <h3>سوريا 🇸🇾</h3>
+        <p>الدراسة وبداية الخبرة في مجال الكهرباء.</p>
+      </div>
+      <div class="time-item">
+        <h3>لبنان 🇱🇧</h3>
+        <p>خبرة عملية في الأعمال الكهربائية السكنية والصناعية والطاقة.</p>
+      </div>
+      <div class="time-item">
+        <h3>ألمانيا 🇩🇪</h3>
+        <p>تطوير الخبرة المهنية في بيئة كهربائية أوروبية وتقنيات المباني الحديثة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">تواصل معي</h2>
+    <p>للاستفسار أو طلب استشارة حول الأعمال الكهربائية.</p>
+    <div class="contact-box">
+      <a class="btn primary" href="tel:+4917684428255">📞 اتصل بي<br><small>0049 176 84428255</small></a>
+      <a class="btn" href="https://wa.me/4917684428255" target="_blank" rel="noopener">💬 واتساب<br><small>مراسلة مباشرة</small></a>
+      <a class="btn" href="mailto:Ahmadmjoelalawad@gmail.com">✉️ البريد الإلكتروني<br><small>Ahmadmjoelalawad@gmail.com</small></a>
+      <a class="btn" href="https://www.facebook.com/share/1EUdbS9QM4/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook<br><small>صفحتي على فيسبوك</small></a>
+      <a class="btn" href="https://www.instagram.com/ahmad_alawad96" target="_blank" rel="noopener">📸 Instagram<br><small>@ahmad_alawad96</small></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  ⚡ Ahmad Alawad — فني كهرباء وحلول كهربائية ⚡<br>
+  جودة • أمان • دقة • احترافية
+</footer>
+</body>
+</html>
